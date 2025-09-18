@@ -1,24 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background-default: #f2f2f2;
-  --box-bg-default: white;
+  --background-default: #f2f2f2; 
+  --box-bg-default: #ffffff;
+  --text-default: #000000;
 
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-family: system-ui "Inter", sans-serif;
+  font-weight: 500;
   letter-spacing: -0.75px;
   background-color: var(--background-default);
-  color: black
+  color: var(--text-default);
 }
 
-/* Classe réutilisable pour les boxes */
+.dark {
+  --background-default: #0C0C0C; 
+  --box-bg-default: #000000;     
+  --text-default: #f2f2f2;       
+}
+
 @layer components {
   .box {
-    @apply bg-[var(--box-bg-default)] rounded-2xl p-4 md:p-6 lg:p-8 ;
+    @apply bg-[var(--box-bg-default)] rounded-2xl p-4 md:p-6 lg:p-8;
   }
 
   .link {
-    @apply underline md:text-lg text-base
-
+    @apply underline md:text-lg text-base text-[var(--text-default)];
   }
 }
