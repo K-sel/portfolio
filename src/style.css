@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --background-default: #f2f2f2;
+  --box-bg-default: white;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.75px;
+  background-color: var(--background-default);
+  color: black
+}
+
+/* Classe réutilisable pour les boxes */
+@layer components {
+  .box {
+    @apply bg-[var(--box-bg-default)] rounded-2xl md:p-8 p-4;
+  }
+
+  .link {
+    @apply underline text-lg
+
+  }
+}
