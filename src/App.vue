@@ -17,10 +17,10 @@ setInterval(() => {
 </script>
 
 <template>
-  <main class="md:m-12 m-3 max-w-dvw flex flex-col md:gap-12 gap-3">
+  <main class="m-3 md:m-6 lg:m-12 max-w-dvw flex flex-col gap-3 md:gap-6 lg:gap-12">
     <div class="box h-[70dvh] flex flex-col justify-between">
       <div class="flex flex-col gap-12">
-        <h1 class="text-5xl">Jonathan Pinard 💻</h1>
+        <h1 class="text-2xl md:text-3xl lg:text-4xl">Jonathan Pinard 💻</h1>
         <div class="flex flex-col gap-6">
           <a class="link" href="#">Projets</a>
           <a class="link" href="#">A propos</a>
@@ -36,7 +36,7 @@ setInterval(() => {
       </div>
 
       <div class="flex flex-col gap-6">
-        <h2 class="text-4xl">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl">
           Je transforme mes idées en réalités, un projet à la fois.
         </h2>
         <div class="flex flex-row justify-between">
