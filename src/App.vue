@@ -5,9 +5,9 @@ const date = ref(Date.now());
 
 const clock = computed(() => {
   const now = new Date(date.value);
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const sec = now.getSeconds();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const sec = String(now.getSeconds()).padStart(2, "0");
   return `${hours}:${minutes}:${sec}`;
 });
 
@@ -33,7 +33,7 @@ setInterval(() => {
     <div class="box h-[70dvh] flex flex-col justify-between">
       <div class="flex flex-col gap-12">
         <h1 class="text-2xl md:text-3xl lg:text-4xl">
-          Jonathan Pinard 
+          Jonathan Pinard
           <span v-if="night">😴</span>
           <span v-else>💻</span>
         </h1>
@@ -59,16 +59,10 @@ setInterval(() => {
         <div class="flex flex-row justify-between">
           <div class="flex flex-row gap-1.5 md:gap-6 items-center">
             <div class="flex flex-row items-center gap-1.5">
-              <svg
-                width="16"
-                height="17"
-                viewBox="0 0 16 17"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="8" cy="8.5" r="8" fill="#FF0000" />
-              </svg>
-              <p v-if="night" class="hidden md:block text-lg">Closed for the night</p>
+              <img src="./assets/dot.svg" alt="dot" class="w-4 h-4" />
+              <p v-if="night" class="hidden md:block text-lg">
+                Closed for the night
+              </p>
               <p v-else class="hidden md:block text-lg">Open for work</p>
             </div>
             <p class="text-lg">UTC+1 ZH {{ clock }}</p>
