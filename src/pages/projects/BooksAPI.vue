@@ -23,7 +23,7 @@ const projectColor = project.value.meta.color;
       :color="projectColor"
     />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-3">
       <img loading="lazy"
         class="w-full h-full object-contain rounded-2xl"
         :src="project.images.image2"
@@ -41,7 +41,7 @@ const projectColor = project.value.meta.color;
       :title="project.texts.bloc2.title"
       :color="projectColor"
     />
-   <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+   <div class="grid grid-cols-1 md:grid-cols-1 gap-3">
       <img loading="lazy"
         class="w-full h-full object-contain rounded-2xl"
         :src="project.images.image4"
@@ -59,7 +59,7 @@ const projectColor = project.value.meta.color;
       :title="project.texts.bloc3.title"
       :color="projectColor"
     />
-   <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+   <div class="grid grid-cols-1 md:grid-cols-1 gap-3">
       <img loading="lazy"
         class="w-full h-full object-contain rounded-2xl"
         :src="project.images.image6"

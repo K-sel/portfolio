@@ -52,7 +52,7 @@ const theme = inject("theme");
       </div>
 
       <div
-        class="border-t-2 border-current gap-0.5 *:pb-0.5 py-3 flex flex-col justify-between h-fit"
+        class="border-t-1 border-current gap-0.5 *:pb-0.5 py-3 flex flex-col justify-between h-fit"
       >
         <div class="flex flex-row justify-between h-fit">
           <p class="text-xs">© 2025</p>

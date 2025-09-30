@@ -1,0 +1,40 @@
+{
+    "slug": "semantic-search",
+    "meta": {
+        "isProject": true,
+        "color": "#4F46E5",
+        "title": "Semantic Search Engine",
+        "category": "Intelligence Artificielle / Backend",
+        "date": "Septembre 2025",
+        "technologies": "Python, Flask, FAISS, Sentence Transformers, Vue.js, Docker",
+        "cover": "./img/semantic-search/image_2.png"
+    },
+    "texts": {
+        "bloc1": {
+            "title": "Le projet",
+            "content": "J'ai développé un <span class='colored'>moteur de recherche sémantique</span> qui comprend le sens des requêtes plutôt que de faire une simple correspondance de mots-clés. Utilisant <span class='colored'>[FAISS, Sentence Transformers, Flask, Vue.js]</span>, l'application transforme du texte en vecteurs mathématiques pour trouver des documents par similarité sémantique."
+        },
+        "bloc2": {
+            "title": "Intelligence artificielle",
+            "content": "Le cœur du système repose sur les <span class='colored'>embeddings vectoriels</span> générés par Sentence Transformers. Chaque document est converti en un vecteur de 384 dimensions capturant son sens sémantique. FAISS, la bibliothèque de <span class='colored'>Facebook AI Research</span>, permet ensuite d'effectuer des recherches de similarité ultra-rapides sur des millions de vecteurs, avec des temps de réponse de l'ordre de quelques millisecondes."
+        },
+        "bloc3": {
+            "title": "Architecture technique",
+            "content": "L'application suit une <span class='colored'>architecture microservices</span> orchestrée par Docker Compose pour l'environnement de développement. Le backend Flask gère l'API REST et l'indexation FAISS avec un environnement Conda, tandis que le frontend Vue.js avec Vite offre une interface avec hot-reload. La communication entre services se fait via un réseau Docker privé avec proxy Vite pour rediriger les appels API."
+        },
+        "bloc4": {
+            "title": "Expérience",
+            "content": "Ce projet m'a permis d'explorer les concepts d'<span class='colored'>intelligence artificielle appliquée</span> et de recherche d'information moderne. J'ai exploré des notions en NLP (traitement du langage naturel) et en architecture distribuée. La mise en place de <span class='colored'>Docker Compose</span> pour orchestrer les services m'a également permis de comprendre les bases du déploiement d'applications conteneurisées."
+        },
+        "bloc5": {
+            "title": "Plus d'informations",
+            "content": "Pour en savoir plus sur le fonctionnement des <span class='colored'>embeddings vectoriels</span>, l'algorithme de recherche FAISS, ainsi que le code complet avec sa documentation détaillée, consultez le <a href='https://github.com/K-sel/semantic-search-engine' target='_blank' class='underline'>Repository Github</a>."
+        }
+    },
+    "images": {
+        "image1": "/img/semantic-search/image_1.png",
+        "image2": "/img/semantic-search/image_2.png",
+        "image3": "/img/semantic-search/image_3.png",
+        "image4" : "/img/semantic-search/image_4.png"
+    }
+}

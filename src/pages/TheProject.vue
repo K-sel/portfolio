@@ -8,6 +8,7 @@ import BooksAPI from "./projects/BooksAPI.vue";
 import Bookshelf from "./projects/Bookshelf.vue";
 import CS50 from "./projects/CS50.vue";
 import Lightshelf from "./projects/Lightshelf.vue";
+import SemanticSearch from "./projects/SemanticSearch.vue";
 
 const route = useRoute().path;
 const project = computed(() => getProjectBySlug(route.split("/")[2]));
@@ -36,6 +37,7 @@ onMounted(() => {
     <Bookshelf v-if="project.slug == 'bookshelf'"></Bookshelf>
     <BooksAPI v-if="project.slug == 'books-api'"></BooksAPI>
     <CS50 v-if="project.slug == 'cs50'"></CS50>
+    <SemanticSearch v-if="project.slug == 'semantic-search'"></SemanticSearch>
   </div>
 </template>
 

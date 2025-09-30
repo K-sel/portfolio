@@ -45,7 +45,10 @@ watch(() => route.fullPath, () => slideInFromTop());
         v-for="(slug, index) in slugs"
         :key="index"
         :slug="slug"
-        :class="index % 3 === 0 ? 'md:col-span-2' : ''"
+        :class="[
+          index % 3 === 0 ? 'md:col-span-2' : '',
+          slugs.length % 3 !== 0 && index === slugs.length - 1 ? 'lg:col-span-3' : ''
+        ]"
       />
     </section>
     <About />
