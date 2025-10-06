@@ -43,11 +43,11 @@ const theme = inject("theme");
           >
           <a
             class="link"
-            href="mailto:clarinette-86-elements@icloud.com"
+            href="mailto:jpinard@bluewin.ch"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contact
+            Mail
           </a>
       </div>
 

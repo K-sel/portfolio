@@ -86,7 +86,7 @@ defineProps({
   phrase: {
     type: String,
     default:
-      "Passioné d'informatique et de développement d'applications web, je transforme mes idées en réalités, un projet à la fois.",
+      "Passionné d'informatique et de développement d'applications web, je transforme mes idées en réalités, un projet à la fois.",
     required: false,
   },
 });
