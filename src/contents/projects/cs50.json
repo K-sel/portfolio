@@ -20,7 +20,8 @@
     },
     "bloc3": {
       "title": "Projets réalisés",
-"content": "J'ai pris l'initiative de <span class='colored'>documenter rigoureusement</span> chaque programme développé semaine après semaine dans un <a href='https://github.com/k-sel/harvard-cs50' target='_blank' class='underline'>Repository Github</a> dédié et <span class='colored'>accessible à tous</span>."    }
+      "content": "J'ai pris l'initiative de <span class='colored'>documenter rigoureusement</span> chaque programme développé semaine après semaine dans un <a href='https://github.com/k-sel/harvard-cs50' target='_blank' class='underline'>Repository Github</a> dédié et <span class='colored'>accessible à tous</span>."
+    }
   },
   "images": {
     "image1": "/img/cs50/image_1.jpg",
