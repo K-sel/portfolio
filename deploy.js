@@ -2,6 +2,7 @@ import { Client } from 'basic-ftp';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fs from 'fs';
 
 // Pour obtenir __dirname en ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -14,6 +15,14 @@ async function deploy() {
     const client = new Client();
     client.ftp.verbose = true; // Affiche tous les logs FTP
     
+    // Créer le fichier .htaccess dans dist/
+    const htaccessContent = `RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]`;
+    
+    fs.writeFileSync(path.join(__dirname, 'dist', '.htaccess'), htaccessContent);
+    console.log('📄 Fichier .htaccess créé');
+    
     try {
         console.log('🔌 Connexion au serveur FTP...');
         
@@ -22,7 +31,7 @@ async function deploy() {
             port: parseInt(process.env.FTP_PORT) || 21,
             user: process.env.FTP_USER,
             password: process.env.FTP_PASSWORD,
-            secure: process.env.FTP_SECURE === 'true'
+            secure: false
         });
         
         console.log('✅ Connecté au serveur FTP');
@@ -31,9 +40,9 @@ async function deploy() {
         const currentDir = await client.pwd();
         console.log(`📁 Répertoire courant: ${currentDir}`);
         
-        // Aller dans le répertoire de destination
-        const remotePath = process.env.FTP_REMOTE_PATH || '/web';
-        await client.cd(remotePath);
+        // Aller dans le répertoire de destination (le créer si nécessaire)
+        const remotePath = process.env.FTP_REMOTE_PATH || '/';
+        await client.ensureDir(remotePath);
         console.log(`📂 Navigation vers: ${remotePath}`);
         
         // Upload tout le dossier dist/

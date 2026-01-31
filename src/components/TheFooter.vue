@@ -41,14 +41,6 @@ const theme = inject("theme");
           <a class="link" href="https://www.linkedin.com/in/jonathanpnrd/"
             >LinkedIn</a
           >
-          <a
-            class="link"
-            href="mailto:jpinard@bluewin.ch"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Mail
-          </a>
       </div>
 
       <div
